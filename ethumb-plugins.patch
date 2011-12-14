@@ -1,0 +1,24 @@
+Thanks to plugins, library itself doesn't require plugged libraries.
+--- ethumb-0.1.1.65643/configure.ac.orig	2011-11-05 12:22:10.000000000 +0100
++++ ethumb-0.1.1.65643/configure.ac	2011-12-14 19:30:27.011501774 +0100
+@@ -140,10 +140,6 @@
+ 
+ AC_ETH_OPTIONAL_MODULE([emotion], true, [CHECK_MODULE_EMOTION])
+ 
+-if $USE_MODULE_EMOTION ; then
+-        requirement_ethumb="$requirement_ethumb emotion"
+-fi
+-
+ AM_CONDITIONAL(HAVE_EPDF, false)
+ define([CHECK_MODULE_EPDF],
+ [
+@@ -151,9 +147,6 @@
+ ])
+ 
+ AC_ETH_OPTIONAL_MODULE([epdf], true, [CHECK_MODULE_EPDF])
+-if $USE_MODULE_EPDF ; then
+-        requirement_ethumb="$requirement_ethumb epdf"
+-fi
+ 
+ AM_CONDITIONAL(HAVE_EDBUS, false)
+ define([CHECK_MODULE_ETHUMBD],
