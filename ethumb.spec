@@ -5,14 +5,13 @@
 Summary:	Ethumb - thumbnail generation library
 Summary(pl.UTF-8):	Ethumb - biblioteka generująca miniaturki
 Name:		ethumb
-Version:	0.1.1.65643
+Version:	1.0.0
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
-Source0:	http://download.enlightenment.org/snapshots/LATEST/%{name}-%{version}.tar.bz2
-# Source0-md5:	1dbb538639eb56213683a04bdb714e7c
-Patch0:		%{name}-link.patch
-Patch1:		%{name}-plugins.patch
+Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
+# Source0-md5:	8de453b6e4b9555aabd21d1e9b2a1a25
+Patch0:		%{name}-plugins.patch
 URL:		http://trac.enlightenment.org/e/wiki/Ethumb
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
@@ -113,7 +112,6 @@ Statyczne biblioteki Ethumb.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -152,8 +150,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files libs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libethumb-ver-pre-svn-09.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libethumb-ver-pre-svn-09.so.1
+%attr(755,root,root) %{_libdir}/libethumb.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libethumb.so.1
 %attr(755,root,root) %{_libdir}/libethumb_client.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libethumb_client.so.1
 %dir %{_libdir}/ethumb
@@ -174,7 +172,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libethumb_client.so
 %{_libdir}/libethumb.la
 %{_libdir}/libethumb_client.la
-%{_includedir}/ethumb-0
+%{_includedir}/ethumb-1
 %{_pkgconfigdir}/ethumb.pc
 %{_pkgconfigdir}/ethumb_client.pc
 
