@@ -5,27 +5,28 @@
 Summary:	Ethumb - thumbnail generation library
 Summary(pl.UTF-8):	Ethumb - biblioteka generująca miniaturki
 Name:		ethumb
-Version:	1.0.1
+Version:	1.7.0
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	ffb8fa09c553b8a95efee5cc8e3050f2
+# Source0-md5:	1c0ec46c2c9088a222440315b8873cf5
 Patch0:		%{name}-plugins.patch
 URL:		http://trac.enlightenment.org/e/wiki/Ethumb
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
-BuildRequires:	e_dbus-devel >= 1.0.0
-BuildRequires:	ecore-devel >= 1.0.0
-BuildRequires:	ecore-evas-devel >= 1.0.0
-BuildRequires:	ecore-file-devel >= 1.0.0
-BuildRequires:	eina-devel >= 1.0.0
+BuildRequires:	e_dbus-devel >= 1.7.0
+BuildRequires:	ecore-devel >= 1.7.0
+BuildRequires:	ecore-evas-devel >= 1.7.0
+BuildRequires:	ecore-file-devel >= 1.7.0
+BuildRequires:	eet-devel >= 1.7.0
+BuildRequires:	eina-devel >= 1.7.0
 BuildRequires:	emotion-devel
 #BuildRequires:	epdf-devel
-BuildRequires:	evas-devel >= 1.0.0
-BuildRequires:	evas-loader-jpeg >= 1.0.0
-BuildRequires:	edje >= 1.0.0
-BuildRequires:	edje-devel >= 1.0.0
+BuildRequires:	evas-devel >= 1.7.0
+BuildRequires:	evas-loader-jpeg >= 1.7.0
+BuildRequires:	edje >= 1.7.0
+BuildRequires:	edje-devel >= 1.7.0
 BuildRequires:	libexif-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -48,13 +49,13 @@ Ethumb to biblioteka do generowania miniaturek. Możliwości:
 Summary:	Ethumb shared libraries
 Summary(pl.UTF-8):	Biblioteki współdzielone Ethumb
 Group:		Libraries
-Requires:	e_dbus >= 1.0.0
-Requires:	ecore >= 1.0.0
-Requires:	ecore-evas >= 1.0.0
-Requires:	ecore-file >= 1.0.0
-Requires:	edje-libs >= 1.0.0
-Requires:	eina >= 1.0.0
-Requires:	evas >= 1.0.0
+Requires:	e_dbus >= 1.7.0
+Requires:	ecore >= 1.7.0
+Requires:	ecore-evas >= 1.7.0
+Requires:	ecore-file >= 1.7.0
+Requires:	edje-libs >= 1.7.0
+Requires:	eina >= 1.7.0
+Requires:	evas >= 1.7.0
 
 %description libs
 Ethumb shared libraries.
@@ -81,14 +82,14 @@ Summary:	Header files for Ethumb libraries
 Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek Ethumb
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	e_dbus-devel >= 1.0.0
-Requires:	ecore-devel >= 1.0.0
-Requires:	ecore-evas-devel >= 1.0.0
-Requires:	ecore-file-devel >= 1.0.0
-Requires:	edje-devel >= 1.0.0
-Requires:	eina-devel >= 1.0.0
+Requires:	e_dbus-devel >= 1.7.0
+Requires:	ecore-devel >= 1.7.0
+Requires:	ecore-evas-devel >= 1.7.0
+Requires:	ecore-file-devel >= 1.7.0
+Requires:	edje-devel >= 1.7.0
+Requires:	eina-devel >= 1.7.0
 Requires:	emotion-devel
-Requires:	evas-devel >= 1.0.0
+Requires:	evas-devel >= 1.7.0
 Requires:	libexif-devel
 
 %description devel
