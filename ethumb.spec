@@ -5,12 +5,12 @@
 Summary:	Ethumb - thumbnail generation library
 Summary(pl.UTF-8):	Ethumb - biblioteka generująca miniaturki
 Name:		ethumb
-Version:	1.7.1
+Version:	1.7.2
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	90b81d3dc2969dce03fd7c460404f375
+# Source0-md5:	e07364c568b9fc2299baa2f6ec60020c
 Patch0:		%{name}-plugins.patch
 URL:		http://trac.enlightenment.org/e/wiki/Ethumb
 BuildRequires:	autoconf >= 2.52
