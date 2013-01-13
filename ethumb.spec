@@ -2,31 +2,38 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static libraries
 #
+%define		ecore_ver	1.7.5
+%define		edbus_ver	1.7.5
+%define		edje_ver	1.7.5
+%define		eet_ver		1.7.5
+%define		eina_ver	1.7.5
+%define		evas_ver	1.7.5
+
 Summary:	Ethumb - thumbnail generation library
 Summary(pl.UTF-8):	Ethumb - biblioteka generująca miniaturki
 Name:		ethumb
-Version:	1.7.3
+Version:	1.7.5
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	53a4670e31d73315311d3337a6e44a4b
+# Source0-md5:	5d4e0840bea7abb396224062593418ac
 Patch0:		%{name}-plugins.patch
 URL:		http://trac.enlightenment.org/e/wiki/Ethumb
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
-BuildRequires:	e_dbus-devel >= 1.7.0
-BuildRequires:	ecore-devel >= 1.7.0
-BuildRequires:	ecore-evas-devel >= 1.7.0
-BuildRequires:	ecore-file-devel >= 1.7.0
-BuildRequires:	eet-devel >= 1.7.0
-BuildRequires:	eina-devel >= 1.7.0
+BuildRequires:	e_dbus-devel >= %{edbus_ver}
+BuildRequires:	ecore-devel >= %{ecore_ver}
+BuildRequires:	ecore-evas-devel >= %{ecore_ver}
+BuildRequires:	ecore-file-devel >= %{ecore_ver}
+BuildRequires:	eet-devel >= %{eet_ver}
+BuildRequires:	eina-devel >= %{eina_ver}
 BuildRequires:	emotion-devel
 #BuildRequires:	epdf-devel
-BuildRequires:	evas-devel >= 1.7.0
-BuildRequires:	evas-loader-jpeg >= 1.7.0
-BuildRequires:	edje >= 1.7.0
-BuildRequires:	edje-devel >= 1.7.0
+BuildRequires:	evas-devel >= %{evas_ver}
+BuildRequires:	evas-loader-jpeg >= %{evas_ver}
+BuildRequires:	edje >= %{edje_ver}
+BuildRequires:	edje-devel >= %{edje_ver}
 BuildRequires:	libexif-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -49,13 +56,13 @@ Ethumb to biblioteka do generowania miniaturek. Możliwości:
 Summary:	Ethumb shared libraries
 Summary(pl.UTF-8):	Biblioteki współdzielone Ethumb
 Group:		Libraries
-Requires:	e_dbus >= 1.7.0
-Requires:	ecore >= 1.7.0
-Requires:	ecore-evas >= 1.7.0
-Requires:	ecore-file >= 1.7.0
-Requires:	edje-libs >= 1.7.0
-Requires:	eina >= 1.7.0
-Requires:	evas >= 1.7.0
+Requires:	e_dbus >= %{edbus_ver}
+Requires:	ecore >= %{ecore_ver}
+Requires:	ecore-evas >= %{ecore_ver}
+Requires:	ecore-file >= %{ecore_ver}
+Requires:	edje-libs >= %{edje_ver}
+Requires:	eina >= %{eina_ver}
+Requires:	evas >= %{evas_ver}
 
 %description libs
 Ethumb shared libraries.
@@ -82,14 +89,14 @@ Summary:	Header files for Ethumb libraries
 Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek Ethumb
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	e_dbus-devel >= 1.7.0
-Requires:	ecore-devel >= 1.7.0
-Requires:	ecore-evas-devel >= 1.7.0
-Requires:	ecore-file-devel >= 1.7.0
-Requires:	edje-devel >= 1.7.0
-Requires:	eina-devel >= 1.7.0
+Requires:	e_dbus-devel >= %{edbus_ver}
+Requires:	ecore-devel >= %{ecore_ver}
+Requires:	ecore-evas-devel >= %{ecore_ver}
+Requires:	ecore-file-devel >= %{ecore_ver}
+Requires:	edje-devel >= %{edje_ver}
+Requires:	eina-devel >= %{eina_ver}
 Requires:	emotion-devel
-Requires:	evas-devel >= 1.7.0
+Requires:	evas-devel >= %{evas_ver}
 Requires:	libexif-devel
 
 %description devel
