@@ -2,22 +2,22 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static libraries
 #
-%define		ecore_ver	1.7.7
-%define		edbus_ver	1.7.7
-%define		edje_ver	1.7.7
-%define		eet_ver		1.7.7
-%define		eina_ver	1.7.7
-%define		evas_ver	1.7.7
+%define		ecore_ver	1.7.9
+%define		edbus_ver	1.7.9
+%define		edje_ver	1.7.9
+%define		eet_ver		1.7.9
+%define		eina_ver	1.7.9
+%define		evas_ver	1.7.9
 
 Summary:	Ethumb - thumbnail generation library
 Summary(pl.UTF-8):	Ethumb - biblioteka generująca miniaturki
 Name:		ethumb
-Version:	1.7.7
-Release:	3
+Version:	1.7.9
+Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	7a6705fa9a4c1a9146bdc55a7d4e6c9f
+# Source0-md5:	4a437bc45c891097056c8af09d3c5ec0
 Patch0:		%{name}-plugins.patch
 URL:		http://trac.enlightenment.org/e/wiki/Ethumb
 BuildRequires:	autoconf >= 2.52
